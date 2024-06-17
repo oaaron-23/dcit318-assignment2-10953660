@@ -1,0 +1,42 @@
+using System;
+
+namespace MovableDemo
+{
+    // Define the IMovable interface with a method Move()
+    interface IMovable
+    {
+        void Move();
+    }
+
+    // Implement the IMovable interface in the Car class
+    class Car : IMovable
+    {
+        public void Move()
+        {
+            Console.WriteLine("Car is moving");
+        }
+    }
+
+    // Implement the IMovable interface in the Bicycle class
+    class Bicycle : IMovable
+    {
+        public void Move()
+        {
+            Console.WriteLine("Bicycle is moving");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Create an instance of Car and call the Move method
+            IMovable car = new Car();
+            car.Move();
+
+            // Create an instance of Bicycle and call the Move method
+            IMovable bicycle = new Bicycle();
+            bicycle.Move();
+        }
+    }
+}
